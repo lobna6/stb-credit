@@ -71,7 +71,18 @@ this.isSigned = docs.some(d => d.name.toLowerCase().includes('signed'));
 
   }
 
-
+  rejectLoan() {
+  if (this.loan?.id !== undefined) {
+    this.loan.step = -1;
+    this.loan.libelle = 'rejected';
+    this.loanService.updateLoanRequest(this.loan.id, this.loan).subscribe({
+      next: () => {
+        this.router.navigate(['/'])
+      },
+      error: (err) => console.error(err)
+    });
+  }
+}
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     if (input.files?.[0]) {

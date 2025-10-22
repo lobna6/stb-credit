@@ -89,12 +89,15 @@
 <div class="mt-4 text-center text-muted small">
   Need help? Contact your branch at <strong>71 123 456</strong>
   or email <a href="mailto:support@stb.com.tn">support@stb.com.tn</a>.
-</div>  <div *ngIf="role=='BANQUIER'" class="mt-4" style="text-align: end;">
-    <button *ngIf="role =='BANQUIER'" type="button" mat-raised-button color="primary" (click)="nextStep()">
-      Accepter
-    </button>
-
-  </div>
+</div>  
+<div *ngIf="role=='BANQUIER'" class="mt-4" style="text-align: end;">
+  <button type="button" mat-raised-button color="warn" (click)="rejectLoan()" style="margin-right: 8px;">
+    Rejeter
+  </button>
+  <button type="button" mat-raised-button color="primary" (click)="nextStep()">
+    Accepter
+  </button>
+</div>
   <!-- Loader -->
   <ng-template #loading>
     <div class="d-flex justify-content-center align-items-center p-4">

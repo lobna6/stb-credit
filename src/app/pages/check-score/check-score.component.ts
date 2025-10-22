@@ -72,5 +72,17 @@ export class CheckScoreComponent implements OnInit {
     }
 
   }
+    rejectLoan() {
+  if (this.loan?.id !== undefined) {
+    this.loan.step = -1;
+    this.loan.libelle = 'rejected';
+    this.loanService.updateLoanRequest(this.loan.id, this.loan).subscribe({
+      next: () => {
+        this.router.navigate(['/'])
+      },
+      error: (err) => console.error(err)
+    });
+  }
+}
 
 }

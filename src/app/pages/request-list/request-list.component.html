@@ -35,7 +35,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
-<i-tabler *ngIf="(element.step !=0 && element.step !=2 && element.step !=5) ||(role =='BANQUIER' && element.step !=5 )" name="edit" class="icon-20" (click)="onEdit(element)" style="cursor:pointer;"></i-tabler>
+<i-tabler *ngIf="(element.step !=0 && element.step !=2 && element.step !=5&& element.step !=-1) ||(role =='BANQUIER' && element.step !=5 )" name="edit" class="icon-20" (click)="onEdit(element)" style="cursor:pointer;"></i-tabler>
 <i-tabler *ngIf="element.step ==5" name="calendar" class="icon-20" (click)="onView(element)" style="cursor:pointer;"></i-tabler>
 
       </td>
