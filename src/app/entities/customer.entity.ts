@@ -1,29 +1,27 @@
 export class Customer {
   id!: number;
 
-  // Basic info
+
   fullName!: string;
   email!: string;
   phone!: string;
 accountNumber !: string;
-  // Identity
-  idType!: string;
+
+idType!: string;
   idNumber!: string;
   idIssueDate!: Date;
   fiscalNumber!: string;
-age!: number;                  // Integer
-monthlyExpenses!: number;      // BigDecimal → number (JS/TS)
-monthlyIncome!: number;        // BigDecimal → number (JS/TS)
-  // Professional info
+age!: number;                  
+monthlyExpenses!: number;      
+monthlyIncome!: number;        
   employer!: string;
   profession!: string;
 
-  // Address
   address!: string;
   city!: string;
   postalCode!: string;
 
-  // Spouse Info (optional)
+
   spouseName?: string;
   spouseEmail?: string;
   spousePhone?: string;

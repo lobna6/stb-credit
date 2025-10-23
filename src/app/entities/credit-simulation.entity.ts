@@ -20,7 +20,7 @@ export class CreditSimulationResponse {
   public customerId?: number;
   public creditTypeId?: number;
   public creditTypeLabel?: string;
-    public creditType?: creditType; // Add this line
+    public creditType?: creditType;
 
 }
 

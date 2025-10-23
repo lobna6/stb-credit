@@ -63,6 +63,9 @@
     </div>
   </div>
   <div *ngIf="role=='BANQUIER'" class="mt-4" style="text-align: end;">
+     <button type="button" mat-raised-button color="warn" (click)="rejectLoan()" style="margin-right: 8px;">
+    Rejeter
+  </button>
                 <button  *ngIf="role =='BANQUIER'" type="button"  mat-raised-button color="primary" (click)="nextStep()">
           Accepter
         </button>
